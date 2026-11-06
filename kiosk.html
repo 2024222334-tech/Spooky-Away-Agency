@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosk | Spooky Away Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="sky">
+        <span class="moon">🌙</span>
+        <span class="ghost g1">👻</span>
+        <span class="ghost g2">👻</span>
+        <span class="ghost g3">👻</span>
+        <span class="bat b1">🦇</span>
+        <span class="bat b2">🦇</span>
+    </div>
+
+    <div class="fog"></div>
+    <div class="peek">👻</div>
+
+    <header>
+        <h1>👻 Spooky Away Agency</h1>
+        <p class="tagline">We remove ghosts. You keep the house.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Founder</a>
+        <a href="kiosk.html" class="active">Kiosk</a>
+    </nav>
+
+    <main class="kiosk-main">
+
+        <section class="card">
+            <h2>Price &amp; Discount Rules</h2>
+
+            <div class="rules">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ghost Type</th>
+                            <th>Price / Ghost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Shadow Ghost</td><td>RM 80.00</td></tr>
+                        <tr><td>Poltergeist</td><td>RM 120.00</td></tr>
+                        <tr><td>Banshee</td><td>RM 150.00</td></tr>
+                        <tr><td>Haunted Mansion Spirit</td><td>RM 200.00</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No. of Ghosts</th>
+                            <th>Group Discount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1 – 2</td><td>5%</td></tr>
+                        <tr><td>3 – 5</td><td>10%</td></tr>
+                        <tr><td>6 – 10</td><td>15%</td></tr>
+                        <tr><td>11 or more</td><td>20%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="note">
+                Extras (added after discount): Holy Water RM30,
+                Salt Barrier RM20, Night Visit RM50.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Book Your Ghost Removal</h2>
+
+            <form id="ghostForm" novalidate>
+
+                <label for="name">Customer Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com">
+
+                <label for="ghostType">Ghost Type</label>
+                <select id="ghostType" name="ghostType">
+                    <option value="">-- Select ghost type --</option>
+                    <option value="80">Shadow Ghost</option>
+                    <option value="120">Poltergeist</option>
+                    <option value="150">Banshee</option>
+                    <option value="200">Haunted Mansion Spirit</option>
+                </select>
+
+                <label for="quantity">Number of Ghosts (1 – 50)</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="50" step="1" placeholder="e.g. 6">
+
+                <span class="label">Visit Time</span>
+
+                <label class="inline">
+                    <input type="radio" name="visit" value="0">
+                    Day Visit (RM 0)
+                </label>
+
+                <label class="inline">
+                    <input type="radio" name="visit" value="50">
+                    Night Visit (+RM 50)
+                </label>
+
+                <span class="label">Optional Extras</span>
+
+                <label class="inline">
+                    <input type="checkbox" name="extra" value="30">
+                    Holy Water Cleansing (RM 30)
+                </label>
+
+                <label class="inline">
+                    <input type="checkbox" name="extra" value="20">
+                    Salt Barrier (RM 20)
+                </label>
+
+                <button type="submit">Calculate Total 👻</button>
+
+            </form>
+        </section>
+
+        <section id="result" class="card hidden" aria-live="polite"></section>
+
+    </main>
+
+    <div id="popGhost" class="popup-ghost">
+        BOO! Calculation complete!
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Spooky Away Agency</p>
+    </footer>
+
+</body>
+</html>
